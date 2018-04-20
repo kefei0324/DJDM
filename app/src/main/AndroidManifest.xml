@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qk.party">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <application
+        android:name=".application.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ModificationPwActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.NoticeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InformationActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.MissionDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.NotifyListActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.NotifyDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.RemindActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.AboutParentActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.PartyMembershipActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".wxapi.WXEntryActivity"
+                  android:exported="true"
+            android:screenOrientation="portrait"/>
+        <receiver android:name=".receiver.MyReceiver"
+                  android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_CLICK_ACTION" />
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <category android:name="com.qk.party" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

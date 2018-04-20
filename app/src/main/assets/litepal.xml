@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="party"></dbname>
+
+    <version value="1"></version>
+    <list>
+        <mapping class="com.qk.party.bean.LoginBean"></mapping>
+    </list>
+</litepal>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#D9D8D8"/>
+    <RadioGroup
+        android:id="@+id/rg_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/dynamic"
+            style="@style/home_btn_style"
+            android:layout_marginTop="0dip"
+            android:drawableTop="@drawable/dynamic"
+            android:checked="true"
+            android:text="@string/dynamic"/>
+
+        <RadioButton
+            android:id="@+id/sociology"
+            style="@style/home_btn_style"
+            android:drawableTop="@drawable/sociology"
+            android:text="@string/sociology"/>
+
+        <RadioButton
+            android:id="@+id/work"
+            style="@style/home_btn_style"
+            android:drawableTop="@drawable/work"
+            android:text="@string/work" />
+
+        <RadioButton
+            android:id="@+id/personal"
+            style="@style/home_btn_style"
+            android:drawableTop="@drawable/personal"
+            android:text="@string/personal" />
+    </RadioGroup>
+</LinearLayout>

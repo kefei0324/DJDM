@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.qk.party"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.1"
+
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7ax86', 'arm64-v8a','x86'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.qk.party",
+                JPUSH_APPKEY : "9d11590dc868582dec58f53a", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    sourceSets {
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            //是否优化zip
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //启用代码混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            //是否优化zip
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //启用代码混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$rootProject.retrofitVersion"
+    compile "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rootProject.retrofitVersion"
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.RxjavaVersion"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.RxAndroidVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.butterknife"
+    compile "com.jakewharton:butterknife:$rootProject.butterknife"
+    compile 'com.xhb:xbanner:1.3.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.31'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3-alpha-2'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    compile 'com.orhanobut:logger:1.11'
+    compile 'org.litepal.android:core:1.5.1'
+
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+    compile 'cn.jiguang.sdk:jpush:3.0.9'  // 此处以JPush 3.0.9 版本为例。
+    compile 'cn.jiguang.sdk:jcore:1.1.7'  // 此处以JCore 1.1.7 版本为例。
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#ff0000</color>
+    <color name="colorAccent">#ff0000</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="login_edit_color">#808080</color>
+    <color name="red">#ff0000</color>
+    <color name="pink">#F73D4D</color>
+    <color name="grey">#f2f2f2</color>
+    <color name="orange">#FFA500</color>
+
+    <color name="home_text_no_select">#5D5D5D</color>
+    <color name="home_text_select">#D81E06</color>
+    <color name="gray_pressed">#b5b5b6</color>
+    <color name="grey2">#666666</color>
+    <color name="text_light_gray">#959595</color>
+    <color name="text_gray">#515151</color>
+    <color name="text_gray1">#788599</color>
+    <color name="light_gray1">#d1d1d1</color>
+    <color name="hui2">#999</color>
+    <color name="hui_text">#808080</color>
+    <color name="hui_line">#c6c3c3</color>
+    <color name="grey_bg">#F6F6F6</color>
+    <color name="btn_blue_normal">#1e90ff</color>
+    <color name="channel_bg">#f7f7f7</color>
+    <color name="black">#000000</color>
+</resources>

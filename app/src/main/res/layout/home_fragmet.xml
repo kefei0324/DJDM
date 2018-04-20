@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/home_title_layout"/>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey">
+        <com.stx.xhb.xbanner.XBanner
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:AutoPlayTime="3000"
+            app:pointsPosition="CENTER" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:paddingBottom="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/strictly"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableTop="@mipmap/strictly"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:layout_height="wrap_content"
+                android:text="从严治党"/>
+            <TextView
+                android:id="@+id/reform"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@mipmap/reform"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:text="深化改革"/>
+            <TextView
+                android:id="@+id/mechanism"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawablePadding="5dp"
+                android:drawableTop="@mipmap/mechanism"
+                android:layout_height="wrap_content"
+                android:text="三项机制"/>
+            <TextView
+                android:id="@+id/transcend"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@mipmap/transcend"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:text="追赶超越"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal" >
+            <View
+                android:layout_width="3dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/newaction"
+                android:textColor="#616564" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:focusable="false"
+                android:id="@+id/recycler"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+            <include layout="@layout/error_layout"
+                android:id="@+id/error"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+
