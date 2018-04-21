@@ -223,14 +223,15 @@
             layout="@layout/no_data_layout"/>
         <Button
                 android:id="@+id/btn_tjrc"
-                android:layout_width="match_parent"
-                android:layout_centerHorizontal="true"
+                android:layout_width="64dp"
                 android:layout_alignParentBottom="true"
                 android:text="添加日程"
-                android:layout_margin="6dp"
-                android:background="@color/red"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/red_round"
                 android:textColor="@color/white"
-                android:layout_height="36dp"/>
+                android:textSize="12sp"
+                android:layout_height="64dp"/>
     </RelativeLayout>
 
 </LinearLayout>
